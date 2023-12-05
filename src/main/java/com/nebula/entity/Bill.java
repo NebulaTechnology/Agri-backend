@@ -1,32 +1,51 @@
 package com.nebula.entity;
-
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
-@Table(name="BILL")
 public class Bill {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long billNo;
-    private long custId;
-    private long[] itemId;
-    private String[] batchId;
-    private String[] prodExpiry;
-    private int[] productQauntity;
-    private double[] productCGST;
-    private double[] productAGST;
-    private double[] productIGST;
-    private String[] productHSN;
-    private String[] productCompany;
-    private double csgt;
-    private double sgst;
-    private double igst;
-    private double totalAmmount;
-    private double paidAmmount;
-    private double remainingAmmount;
 
+    @Column(name = "customer_id")
+    private Long custId;
+
+
+    private Long[] itemId;
+
+
+    private String[] batchNum;
+
+
+    private String[] prodExpiry;
+
+
+    private Integer[] productQuantity;
+
+
+    private Double[] productCGST;
+
+
+    private Double[] productAGST;
+
+
+    private Double[] productIGST;
+
+
+    private String[] productHSN;
+
+
+    private String[] productCompany;
+
+    private Double csgt;
+    private Double sgst;
+    private Double igst;
+    private Double totalAmmount;
+    private Double paidAmmount;
+    private Double remainingAmmount;
 }
