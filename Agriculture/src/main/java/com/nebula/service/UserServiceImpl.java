@@ -23,10 +23,7 @@ public class UserServiceImpl implements UserService {
                 }
             }
 
-        } else {
-            throw new RuntimeException("userName and password is empty");
-        }
-        return new User();
+        } throw new RuntimeException("userName and password is empty");
     }
 
     @Override
